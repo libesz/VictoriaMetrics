@@ -53,6 +53,7 @@ services:
       - ./../../dashboards/vmalert.json:/var/lib/grafana/dashboards/vmalert.json
       - ./../../dashboards/cadvisor.json:/var/lib/grafana/dashboards/cadvisor.json
       - ./../../dashboards/node-exporter.json:/var/lib/grafana/dashboards/node-exporter.json
+      - ./../../dashboards/stream.json:/var/lib/grafana/dashboards/stream.json
     networks:
       - vm_net
       - backends
