@@ -106,6 +106,8 @@ services:
       - "/usr/bin/cadvisor"
       - "-logtostderr"
       - "-docker_only"
+      - "-housekeeping_interval=30s"
+      - "-disable_metrics=memory_numa,tcp,udp,advtcp,sched,process,hugetlb,referenced_memory,cpu_topology,resctrl,cpuset,disk,diskIO,accelerator,percpu"
     networks:
       - vm_net
     restart: always
